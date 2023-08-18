@@ -21,6 +21,10 @@ public Comment (int id,String autor, String comment){
     Fecha=Calendar.getInstance();
 }
 
+public int getID(){
+    return postID;
+}
+
 public String list(){
     String listar;
     
