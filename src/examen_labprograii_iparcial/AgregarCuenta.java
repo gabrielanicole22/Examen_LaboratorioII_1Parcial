@@ -66,6 +66,11 @@ public class AgregarCuenta extends javax.swing.JFrame {
                 btnCrearMouseExited(evt);
             }
         });
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
 
         lblTitle.setFont(new java.awt.Font("Felix Titling", 0, 18)); // NOI18N
         lblTitle.setText("Crear cuenta");
@@ -129,6 +134,11 @@ public class AgregarCuenta extends javax.swing.JFrame {
         btnCrear.setForeground(Color.white);
         setCursor(Cursor.DEFAULT_CURSOR);
     }//GEN-LAST:event_btnCrearMouseExited
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+
+        uber.AgregarCuenta(txtUsuario.getText(), txtTipo.getText());
+    }//GEN-LAST:event_btnCrearActionPerformed
 
 
 

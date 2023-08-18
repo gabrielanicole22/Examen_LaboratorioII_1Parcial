@@ -203,7 +203,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnAgregarPostMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarPostMouseClicked
         // TODO add your handling code here:
-        AgregarPost post = new AgregarPost();
+        AgregarPost post = new AgregarPost(social);
         post.setVisible(true);
     }//GEN-LAST:event_btnAgregarPostMouseClicked
 
@@ -215,7 +215,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnAgregarComentarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarComentarioMouseClicked
         // TODO add your handling code here:
-        AgregarComentario comentario = new AgregarComentario();
+        AgregarComentario comentario = new AgregarComentario(social);
         comentario.setVisible(true);
     }//GEN-LAST:event_btnAgregarComentarioMouseClicked
 
