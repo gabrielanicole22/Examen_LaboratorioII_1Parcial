@@ -32,12 +32,16 @@ public class Facebook extends SocialClass implements Commentable {
     }
     
     
+    
     public boolean addComment(Comment comment) {
-            int postId = comment.getID();
+        int postId = comment.getID();
+
+    
         if (postId >= 0 && postId < posts.size()) {
             Comentarios.add(comment);
             return true;
         }
+       
         return false;
     }
     

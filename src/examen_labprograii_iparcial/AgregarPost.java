@@ -70,6 +70,11 @@ public class AgregarPost extends javax.swing.JFrame {
                 btnAgregarMouseExited(evt);
             }
         });
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Felix Titling", 0, 18)); // NOI18N
         jLabel3.setText("Agregar Post");
@@ -136,6 +141,11 @@ public class AgregarPost extends javax.swing.JFrame {
         btnAgregar.setForeground(Color.white);
         setCursor(Cursor.DEFAULT_CURSOR);
     }//GEN-LAST:event_btnAgregarMouseExited
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+      uber.AgregarPost(txtUsername.getText(), txtPost.getText());
+      this.dispose();
+    }//GEN-LAST:event_btnAgregarActionPerformed
 
     
 

@@ -37,8 +37,8 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtUsuario" alignment="0" pref="155" max="32767" attributes="0"/>
                           <Component id="txtPostID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnAutor" max="32767" attributes="0"/>
-                          <Component id="btnComentario" max="32767" attributes="0"/>
+                          <Component id="txtAutor" max="32767" attributes="0"/>
+                          <Component id="txtComentario" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -73,12 +73,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAutor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAutor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnComentario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtComentario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="43" max="32767" attributes="0"/>
               <Component id="btnAgregar" min="-2" pref="51" max="-2" attributes="0"/>
@@ -133,6 +133,7 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgregarMouseClicked"/>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgregarMouseEntered"/>
         <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgregarMouseExited"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -151,9 +152,9 @@
         <Property name="text" type="java.lang.String" value="Comentario:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="btnAutor">
+    <Component class="javax.swing.JTextField" name="txtAutor">
     </Component>
-    <Component class="javax.swing.JTextField" name="btnComentario">
+    <Component class="javax.swing.JTextField" name="txtComentario">
     </Component>
   </SubComponents>
 </Form>

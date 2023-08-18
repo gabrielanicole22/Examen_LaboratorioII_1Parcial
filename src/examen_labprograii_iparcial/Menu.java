@@ -209,7 +209,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnAgregarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseClicked
         // TODO add your handling code here:
-        AgregarAmigo amigo = new AgregarAmigo();
+        AgregarAmigo amigo = new AgregarAmigo(social);
         amigo.setVisible(true);
     }//GEN-LAST:event_btnAgregarAmigoMouseClicked
 
@@ -221,7 +221,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnVerPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerPerfilMouseClicked
         // TODO add your handling code here:
-        UsuarioPerfil perfil = new UsuarioPerfil();
+        UsuarioPerfil perfil = new UsuarioPerfil(social);
         perfil.setVisible(true);
     }//GEN-LAST:event_btnVerPerfilMouseClicked
 

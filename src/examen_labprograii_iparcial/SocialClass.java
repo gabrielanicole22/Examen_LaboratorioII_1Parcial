@@ -16,12 +16,12 @@ public abstract class SocialClass {
  public ArrayList<String> friends;
     public ArrayList<String> posts;
     public String username;
-
     public SocialClass(String username) {
         this.username = username;
         this.friends = new ArrayList<>();
         this.posts = new ArrayList<>();
     }
+
 
     public boolean addFriend(String user) {
         if (!user.equals(username) && !friends.contains(user)) {

@@ -16,8 +16,10 @@ public class AgregarAmigo extends javax.swing.JFrame {
     /**
      * Creates new form AgregarAmigo
      */
-    public AgregarAmigo() {
+    UberSocial uber;
+    public AgregarAmigo(UberSocial uber) {
         initComponents();
+        this.uber=uber;
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         Color backgroundColor = new Color(246, 234, 240);
         getContentPane().setBackground(backgroundColor);
@@ -73,6 +75,11 @@ public class AgregarAmigo extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnAgregarMouseExited(evt);
+            }
+        });
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
             }
         });
 
@@ -138,6 +145,10 @@ public class AgregarAmigo extends javax.swing.JFrame {
         btnAgregar.setForeground(Color.white);
         setCursor(Cursor.DEFAULT_CURSOR);
     }//GEN-LAST:event_btnAgregarMouseExited
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+     uber.AgregarAmigo(txtUsuario.getText(), txtAmigoUser.getText());
+    }//GEN-LAST:event_btnAgregarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

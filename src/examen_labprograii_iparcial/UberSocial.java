@@ -22,14 +22,15 @@ public class UberSocial {
 
     public SocialClass buscar(String username, int i) {
         if (i < Cuentas.size()) {
-            if (Cuentas.get(i).equals(username)) {
+            if (Cuentas.get(i).username.equals(username)) {
                 return Cuentas.get(i);
             } else {
                 return buscar(username, i + 1);
             }
 
+        }else{
+        return null;   
         }
-        return null;
     }
 
     public void AgregarPost(String Username, String Post) {
@@ -45,14 +46,18 @@ public class UberSocial {
     }
 
     public void AgregarCuenta(String username, String tipo) {
-
-        if (buscar(username, 0) == null) {
+        SocialClass user=buscar(username, 0);
+        
+        
+        if (user == null) {
             if (tipo.equals("Facebook")) {
                 Facebook face = new Facebook(username);
                 Cuentas.add(face);
+                JOptionPane.showMessageDialog(null, "Cuenta agregada exitosamente!");
             } else if (tipo.equals("Twitter")) {
                 Twitter tweet = new Twitter(username);
                 Cuentas.add(tweet);
+                JOptionPane.showMessageDialog(null, "Cuenta agregada exitosamente!");
             } else {
                 JOptionPane.showMessageDialog(null, "Error: tipo inexistente");
             }
@@ -63,24 +68,34 @@ public class UberSocial {
     }
 
     public void AgregarAmigo(String user1, String user2) {
-        SocialClass userr = buscar(user1, 0);
-        if (userr != null && userr instanceof Facebook) {
-            userr.addFriend(user2);
-            JOptionPane.showMessageDialog(null, "Amigo agregado existosamente");
-        } else {
-            JOptionPane.showMessageDialog(null, "Error: Usuario/s no encontrados");
+        SocialClass userr = buscar(user2, 0);
+        boolean amigo2=false;
+        if(userr!=null){
+            amigo2=true;
         }
+        userr = buscar(user1, 0);
+        
+        
+        if(amigo2==true && userr!=null){
+        userr.addFriend(user2);
+            JOptionPane.showMessageDialog(null, "Amigo agregado existosamente"); 
+    }else{
+     JOptionPane.showMessageDialog(null, "Error: usuario no encontrado");    
+        }
+        
     }
 
         public void AgregarComment(String user,int id, String autor,String comment) {
 
             SocialClass userr = buscar(user, 0);
-
+            
+            
             if (userr != null && userr instanceof Facebook) {
                 Facebook facebookuser=(Facebook) userr;
                 Comment comentar=new Comment(id,autor,comment);
                 facebookuser.addComment(comentar);
                 JOptionPane.showMessageDialog(null, "Comentario agregado exitosamente");
+
             }
         }
         
