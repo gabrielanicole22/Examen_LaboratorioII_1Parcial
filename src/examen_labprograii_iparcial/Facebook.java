@@ -1,6 +1,7 @@
 package examen_labprograii_iparcial;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,32 +16,28 @@ public class Facebook extends SocialClass implements Commentable {
         Comentarios = new ArrayList<>(); 
     }
     
-    public boolean AgregarComment(int id, Comment comment){
-        int postId = comment.getID();
+    public void timeline() {
+        
+        String datos="";
+        for(int i=0;i<Comentarios.size();i++){
+            datos=" Post "+(i+1);
+             for (Comment comment : Comentarios) {
+                if (comment.getID() == i) {
+                    datos+=comment.list();
+                }
+        }
+    }
+        JOptionPane.showMessageDialog(null, datos,"Comentarios", JOptionPane.INFORMATION_MESSAGE);
+   
+    }
+
+    public boolean addComment(Comment comment) {
+            int postId = comment.getID();
         if (postId >= 0 && postId < posts.size()) {
             Comentarios.add(comment);
             return true;
         }
         return false;
-    }
-
-    public String imprimir(){
-        String datos="";
-        for(int i=0;i<Comentarios.size();i++){
-            
-        }
-        return datos;
-        
-    }
-    
-    
-    public void timeline() {
-    
-    }
-
-    public boolean addComment(Comment comment) {
-    
-    return true;
     }
     
     
