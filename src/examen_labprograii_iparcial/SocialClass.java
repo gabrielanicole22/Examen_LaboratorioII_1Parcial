@@ -5,6 +5,7 @@
 package examen_labprograii_iparcial;
 
 import java.util.ArrayList;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -36,7 +37,12 @@ public abstract class SocialClass {
 
     public abstract void timeline();
 
-    public void myProfile() {
+    public void myProfile(JTextArea area) {
+        
+        String Informacion="Username: " + username
+                +"\nTimeline: ";
+        
+        
         System.out.println("Username: " + username);
         System.out.println("Timeline:");
         timeline();
