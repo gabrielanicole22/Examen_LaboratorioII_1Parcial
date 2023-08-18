@@ -6,7 +6,7 @@ package examen_labprograii_iparcial;
 
 /**
  *
- * @author User
+ * @author Gabriela Mejia
  */
 public class Examen_LabPrograII_IParcial {
 
@@ -15,6 +15,6 @@ public class Examen_LabPrograII_IParcial {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new Menu().setVisible(true);
     }
-    
 }
