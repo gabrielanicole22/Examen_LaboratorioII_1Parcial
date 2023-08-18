@@ -35,12 +35,6 @@ public abstract class SocialClass {
     }
 
     public abstract void timeline();
-    
-    /*public void timeline() {
-        for (String post : posts) {
-            System.out.println(post);
-        }
-    }*/
 
     public void myProfile() {
         System.out.println("Username: " + username);
