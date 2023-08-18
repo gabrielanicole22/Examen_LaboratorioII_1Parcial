@@ -30,7 +30,8 @@ public class Facebook extends SocialClass implements Commentable {
         JOptionPane.showMessageDialog(null, datos,"Comentarios", JOptionPane.INFORMATION_MESSAGE);
    
     }
-
+    
+    
     public boolean addComment(Comment comment) {
             int postId = comment.getID();
         if (postId >= 0 && postId < posts.size()) {

@@ -8,12 +8,12 @@ package examen_labprograii_iparcial;
  *
  * @author Gabriela Mejia
  */
-public abstract class Twitter extends SocialClass{
+public  class Twitter extends SocialClass{
     public Twitter(String user){
         super(user);
     }
     
-    @Override
+    
     public void timeline() {
         for (String post : posts) {
             System.out.println(post);

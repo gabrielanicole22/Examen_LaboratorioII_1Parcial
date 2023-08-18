@@ -21,8 +21,6 @@ public abstract class SocialClass {
         this.friends = new ArrayList<>();
         this.posts = new ArrayList<>();
     }
-    
-    
 
     public boolean addFriend(String user) {
         if (!user.equals(username) && !friends.contains(user)) {
