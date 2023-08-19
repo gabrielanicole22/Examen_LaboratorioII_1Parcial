@@ -161,7 +161,7 @@ public class AgregarComentario extends javax.swing.JFrame {
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
     
         int id=Integer.parseInt(txtPostID.getText());
-        uber.AgregarComment(txtUsuario.getText(), id, txtAutor.getText(), txtComentario.getText());
+        uber.agregarComentario(txtUsuario.getText(), id, txtAutor.getText(), txtComentario.getText());
         
     }//GEN-LAST:event_btnAgregarActionPerformed
 

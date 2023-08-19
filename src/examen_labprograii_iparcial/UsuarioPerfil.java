@@ -17,9 +17,10 @@ public class UsuarioPerfil extends javax.swing.JFrame {
      * Creates new form UsuarioPerfil
      */
     UberSocial uber;
+
     public UsuarioPerfil(UberSocial uber) {
         initComponents();
-        this.uber=uber;
+        this.uber = uber;
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         Color backgroundColor = new Color(246, 234, 240);
         getContentPane().setBackground(backgroundColor);
@@ -106,7 +107,8 @@ public class UsuarioPerfil extends javax.swing.JFrame {
 
     private void btnVerPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerPerfilMouseClicked
         // TODO add your handling code here:
-        VerPerfil perfil = new VerPerfil(uber);
+        String username = txtUsuario.getText(); // Obtener el nombre de usuario ingresado
+        VerPerfil perfil = new VerPerfil(uber, username);
         perfil.setVisible(true);
     }//GEN-LAST:event_btnVerPerfilMouseClicked
 

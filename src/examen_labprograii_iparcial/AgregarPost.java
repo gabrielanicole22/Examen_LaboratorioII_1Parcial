@@ -143,7 +143,7 @@ public class AgregarPost extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarMouseExited
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-      uber.AgregarPost(txtUsername.getText(), txtPost.getText());
+      uber.agregarPost(txtUsername.getText(), txtPost.getText());
       this.dispose();
     }//GEN-LAST:event_btnAgregarActionPerformed
 

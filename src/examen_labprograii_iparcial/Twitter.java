@@ -14,9 +14,22 @@ public  class Twitter extends SocialClass{
     }
     
     
-    public void timeline() {
+public void timeline() {
+        System.out.println("Timeline for " + username);
         for (String post : posts) {
             System.out.println(post);
         }
+        System.out.println();
     }
+
+public String timelinee() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Timeline de ").append(username).append("\n");
+    for (String post : posts) {
+        sb.append(post).append("\n");
+    }
+    sb.append("\n");
+    return sb.toString();
+}
+
 }

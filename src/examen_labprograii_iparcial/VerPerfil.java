@@ -16,12 +16,30 @@ public class VerPerfil extends javax.swing.JFrame {
      * Creates new form VerPerfil
      */
     UberSocial uber;
-    public VerPerfil(UberSocial uber) {
+    String username;
+
+    public VerPerfil(UberSocial uber, String username) {
         initComponents();
-        this.uber=uber;
+        this.uber = uber;
+        this.username = username;
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         Color backgroundColor = new Color(245, 234, 240);
         getContentPane().setBackground(backgroundColor);
+        updateProfile();
+    }
+
+    private void updateProfile() {
+        SocialClass account = uber.buscar(username);
+        if (account != null) {
+            txtAPerfil.setText("");
+            txtAPerfil.append("Username: " + account.username + "\n\n");
+            txtAPerfil.append("Posts:\n");
+            for (String post : account.posts) {
+                txtAPerfil.append("- " + post + "\n");
+            }
+        } else {
+            txtAPerfil.setText("Usuario no encontrado.");
+        }
     }
 
     /**

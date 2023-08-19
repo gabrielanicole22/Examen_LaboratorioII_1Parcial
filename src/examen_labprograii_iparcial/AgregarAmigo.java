@@ -147,7 +147,7 @@ public class AgregarAmigo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarMouseExited
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-     uber.AgregarAmigo(txtUsuario.getText(), txtAmigoUser.getText());
+     uber.agregarAmigo(txtUsuario.getText(), txtAmigoUser.getText());
     }//GEN-LAST:event_btnAgregarActionPerformed
 
 

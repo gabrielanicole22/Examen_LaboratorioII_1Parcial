@@ -37,12 +37,10 @@ public abstract class SocialClass {
 
     public abstract void timeline();
 
-    public void myProfile(JTextArea area) {
+    public void myProfile() {
         
         String Informacion="Username: " + username
                 +"\nTimeline: ";
-        
-        
         System.out.println("Username: " + username);
         System.out.println("Timeline:");
         timeline();
@@ -58,4 +56,5 @@ public abstract class SocialClass {
             }
         }
     }
+    
 }

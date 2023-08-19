@@ -137,7 +137,7 @@ public class AgregarCuenta extends javax.swing.JFrame {
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
 
-        uber.AgregarCuenta(txtUsuario.getText(), txtTipo.getText());
+        uber.agregarCuenta(txtUsuario.getText(), txtTipo.getText().toUpperCase());
         this.dispose();
     }//GEN-LAST:event_btnCrearActionPerformed
 
