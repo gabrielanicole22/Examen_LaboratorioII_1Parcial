@@ -142,7 +142,6 @@ public class AgregarCuenta extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearActionPerformed
 
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrear;
     private javax.swing.JLabel lblTipo;
